@@ -1,0 +1,37 @@
+record(bo, "$(P)SIM")
+{
+    field(SCAN, "Passive")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "NO")
+    field(ONAM, "YES")
+}
+
+record(bo, "$(P)DISABLE") 
+{
+    field(DESC, "Disable comms")
+    field(PINI, "YES")
+    field(VAL, "0")
+    field(OMSL, "supervisory")
+    field(ZNAM, "COMMS ENABLED")
+    field(ONAM, "COMMS DISABLED")
+}
+record(ai,"$(P)VAL"){
+    field(DTYP,"$(D)")
+    field(DESC,"Random numbers")
+    field(SCAN,"1 second")
+    field(INP,"$(S)")
+    field(LINR,"LINEAR")
+    field(ESLO,1)
+    field(EOFF,0)
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM::VAL")
+    field(SDIS, "$(P)DISABLE")
+}
+### SIMULATION RECORDS ###
+
+record(ai, "$(P)SIM:VAL")
+{
+    field(SCAN, "Passive")
+    field(DTYP, "Soft Channel")
+}
+
