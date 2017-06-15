@@ -25,7 +25,7 @@ $(APPNAME)_DBD += asSupport.dbd
 $(APPNAME)_DBD += devIocStats.dbd
 $(APPNAME)_DBD += caPutLog.dbd
 ## add other dbd here ##
-$(APPNAME)_DBD += random.dbd
+$(APPNAME)_DBD += randomSupport.dbd
 
 # Add all the support libraries needed by this IOC
 ## ISIS standard libraries ##
